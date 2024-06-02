@@ -1,0 +1,134 @@
+// font
+@font-face {
+    font-family: kanit;
+    src: url("/fonts/KANIT-REGULAR.TTF");
+}
+
+// color 
+$main-color: #333;
+$primary: #007afe;
+$danger: #db3444;
+$success: #27a644;
+$warning: #fec006;
+$seconds: #292b2c;
+$theme-color: #5E17EB;
+
+:root {
+    --height-nav: 9vh;
+    --home-banner-height: 500px;
+}
+
+// mixin
+@mixin button($color) {
+    background: $color;
+    color: #fff;
+
+    &:hover {
+        background: darken($color, 10%);
+    }
+}
+.btn-primary{ @include button($primary) }
+.btn-seconds{ @include button($seconds) }
+
+// global css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: kanit;
+}
+.btn {
+    cursor: pointer;
+    width: 130px;
+    padding: 5px 7px;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--height-nav);
+
+    .logo {
+        display: flex;
+        align-items: center;
+        padding-left: 100px;
+
+        & .logo-pic {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            margin-right: 10px;
+
+            & img {
+                width: 100%;
+            }
+        }  
+        & .logo-text {
+            font-size: 30px;
+            color: #000;
+        }  
+    }
+    & ul {
+        display: flex;
+        padding: 20px;
+        padding-right: 100px;
+
+        & li {
+            list-style: none;
+            margin-right: 30px;
+
+            & .link {
+                color: #5E17EB;
+                text-decoration: none;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.container {
+    // Home component style
+    &.home {
+        width: 100%;
+        & .banner{
+            height: 680px;
+            position: relative;
+            & .content {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                & .content-pic {
+                    & img {
+                        filter: drop-shadow(-3px -3px 2px #888);
+                    }
+                }
+
+                & .content-info {
+                    font-size: 50px;
+                    margin-left: 80px;
+                    & b {
+                        color: #5E17EB;
+                    }
+                }
+            }
+        }
+        & hr {
+
+            border: 1px solid #ccc;
+            margin: 40px 20px 0 20px;
+            border-radius: 20px;
+        }
+    }
+}

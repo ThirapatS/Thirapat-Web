@@ -1,0 +1,114 @@
+@font-face {
+  font-family: kanit;
+  src: url("/fonts/KANIT-REGULAR.TTF"); }
+
+/* line 16, scss/main.scss */
+:root {
+  --height-nav: 9vh;
+  --home-banner-height: 500px; }
+
+/* line 30, scss/main.scss */
+.btn-primary {
+  background: #007afe;
+  color: #fff; }
+  /* line 26, scss/main.scss */
+  .btn-primary:hover {
+    background: #0062cb; }
+
+/* line 31, scss/main.scss */
+.btn-seconds {
+  background: #292b2c;
+  color: #fff; }
+  /* line 26, scss/main.scss */
+  .btn-seconds:hover {
+    background: #101112; }
+
+/* line 34, scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: kanit; }
+
+/* line 40, scss/main.scss */
+.btn {
+  cursor: pointer;
+  width: 130px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+/* line 51, scss/main.scss */
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--height-nav); }
+  /* line 57, scss/main.scss */
+  nav.navbar .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 100px; }
+    /* line 62, scss/main.scss */
+    nav.navbar .logo .logo-pic {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      margin-right: 10px; }
+      /* line 68, scss/main.scss */
+      nav.navbar .logo .logo-pic img {
+        width: 100%; }
+    /* line 72, scss/main.scss */
+    nav.navbar .logo .logo-text {
+      font-size: 30px;
+      color: #000; }
+  /* line 77, scss/main.scss */
+  nav.navbar ul {
+    display: flex;
+    padding: 20px;
+    padding-right: 100px; }
+    /* line 82, scss/main.scss */
+    nav.navbar ul li {
+      list-style: none;
+      margin-right: 30px; }
+      /* line 86, scss/main.scss */
+      nav.navbar ul li .link {
+        color: #5E17EB;
+        text-decoration: none;
+        font-size: 25px; }
+
+/* line 97, scss/main.scss */
+.container.home {
+  width: 100%; }
+  /* line 99, scss/main.scss */
+  .container.home .banner {
+    height: 680px;
+    position: relative; }
+    /* line 102, scss/main.scss */
+    .container.home .banner .content {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; }
+      /* line 113, scss/main.scss */
+      .container.home .banner .content .content-pic img {
+        filter: drop-shadow(-3px -3px 2px #888); }
+      /* line 118, scss/main.scss */
+      .container.home .banner .content .content-info {
+        font-size: 50px;
+        margin-left: 80px; }
+        /* line 121, scss/main.scss */
+        .container.home .banner .content .content-info b {
+          color: #5E17EB; }
+  /* line 127, scss/main.scss */
+  .container.home hr {
+    border: 1px solid #ccc;
+    margin: 40px 20px 0 20px;
+    border-radius: 20px; }
