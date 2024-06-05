@@ -4,6 +4,10 @@
     src: url("/fonts/KANIT-REGULAR.TTF");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 // color 
 $main-color: #333;
 $primary: #007afe;
@@ -124,11 +128,86 @@ nav.navbar {
                 }
             }
         }
-        & hr {
+    }
+    // Learning component style
+    &.learn {
+        display: flex;
+        justify-content: space-evenly;
+        background: #111;
+        padding-top: 40px;
 
-            border: 1px solid #ccc;
-            margin: 40px 20px 0 20px;
-            border-radius: 20px;
+        & .title {
+            margin-right: 30px;
+            display: flex;
+            & .title-pic {
+                display: flex;
+                align-items: start;
+                & img {
+                    width: 70px;
+                    transition: .4s;
+                    margin-right: 20px;
+                    &:hover {
+                        transform: scale(1.2);
+                        rotate: -90deg;
+                    }
+                }
+            }
+
+            & .title-header-text {
+                & .header-text {
+                    font-size: 50px;
+                    color: #fff;
+                }
+                & .small-text {
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    color: lighten($theme-color, 10%);
+                }
+            }
         }
+        & .learning-info {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+            justify-content: space-between;
+
+            & .card {
+                text-align: center;
+                padding: 20px;
+                margin: 20px;
+                border-radius: 5px;
+                width: 300px;
+                height: 400px;
+                background: linear-gradient(122deg, rgba(65,0,194,1) 0%, rgb(0, 0, 0) 100%),rgb(112, 40, 255);
+                transition: .4s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                & .card-title-pic img{
+                    width: 200px;
+                    margin-bottom: 40px;
+                }
+
+                & .card-body {
+                    text-align: start;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@keyframes upDown{
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0;
     }
 }

@@ -2,35 +2,39 @@
   font-family: kanit;
   src: url("/fonts/KANIT-REGULAR.TTF"); }
 
-/* line 16, scss/main.scss */
+/* line 7, scss/main.scss */
+html {
+  scroll-behavior: smooth; }
+
+/* line 20, scss/main.scss */
 :root {
   --height-nav: 9vh;
   --home-banner-height: 500px; }
 
-/* line 30, scss/main.scss */
+/* line 34, scss/main.scss */
 .btn-primary {
   background: #007afe;
   color: #fff; }
-  /* line 26, scss/main.scss */
+  /* line 30, scss/main.scss */
   .btn-primary:hover {
     background: #0062cb; }
 
-/* line 31, scss/main.scss */
+/* line 35, scss/main.scss */
 .btn-seconds {
   background: #292b2c;
   color: #fff; }
-  /* line 26, scss/main.scss */
+  /* line 30, scss/main.scss */
   .btn-seconds:hover {
     background: #101112; }
 
-/* line 34, scss/main.scss */
+/* line 38, scss/main.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: kanit; }
 
-/* line 40, scss/main.scss */
+/* line 44, scss/main.scss */
 .btn {
   cursor: pointer;
   width: 130px;
@@ -41,53 +45,53 @@
   font-weight: 700;
   letter-spacing: 1px; }
 
-/* line 51, scss/main.scss */
+/* line 55, scss/main.scss */
 nav.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: var(--height-nav); }
-  /* line 57, scss/main.scss */
+  /* line 61, scss/main.scss */
   nav.navbar .logo {
     display: flex;
     align-items: center;
     padding-left: 100px; }
-    /* line 62, scss/main.scss */
+    /* line 66, scss/main.scss */
     nav.navbar .logo .logo-pic {
       width: 25px;
       height: 25px;
       cursor: pointer;
       margin-right: 10px; }
-      /* line 68, scss/main.scss */
+      /* line 72, scss/main.scss */
       nav.navbar .logo .logo-pic img {
         width: 100%; }
-    /* line 72, scss/main.scss */
+    /* line 76, scss/main.scss */
     nav.navbar .logo .logo-text {
       font-size: 30px;
       color: #000; }
-  /* line 77, scss/main.scss */
+  /* line 81, scss/main.scss */
   nav.navbar ul {
     display: flex;
     padding: 20px;
     padding-right: 100px; }
-    /* line 82, scss/main.scss */
+    /* line 86, scss/main.scss */
     nav.navbar ul li {
       list-style: none;
       margin-right: 30px; }
-      /* line 86, scss/main.scss */
+      /* line 90, scss/main.scss */
       nav.navbar ul li .link {
         color: #5E17EB;
         text-decoration: none;
         font-size: 25px; }
 
-/* line 97, scss/main.scss */
+/* line 101, scss/main.scss */
 .container.home {
   width: 100%; }
-  /* line 99, scss/main.scss */
+  /* line 103, scss/main.scss */
   .container.home .banner {
     height: 680px;
     position: relative; }
-    /* line 102, scss/main.scss */
+    /* line 106, scss/main.scss */
     .container.home .banner .content {
       width: 100%;
       position: absolute;
@@ -97,18 +101,82 @@ nav.navbar {
       display: flex;
       align-items: center;
       justify-content: space-evenly; }
-      /* line 113, scss/main.scss */
+      /* line 117, scss/main.scss */
       .container.home .banner .content .content-pic img {
         filter: drop-shadow(-3px -3px 2px #888); }
-      /* line 118, scss/main.scss */
+      /* line 122, scss/main.scss */
       .container.home .banner .content .content-info {
         font-size: 50px;
         margin-left: 80px; }
-        /* line 121, scss/main.scss */
+        /* line 125, scss/main.scss */
         .container.home .banner .content .content-info b {
           color: #5E17EB; }
-  /* line 127, scss/main.scss */
-  .container.home hr {
-    border: 1px solid #ccc;
-    margin: 40px 20px 0 20px;
-    border-radius: 20px; }
+
+/* line 133, scss/main.scss */
+.container.learn {
+  display: flex;
+  justify-content: space-evenly;
+  background: #111;
+  padding-top: 40px; }
+  /* line 139, scss/main.scss */
+  .container.learn .title {
+    margin-right: 30px;
+    display: flex; }
+    /* line 142, scss/main.scss */
+    .container.learn .title .title-pic {
+      display: flex;
+      align-items: start; }
+      /* line 145, scss/main.scss */
+      .container.learn .title .title-pic img {
+        width: 70px;
+        transition: .4s;
+        margin-right: 20px; }
+        /* line 149, scss/main.scss */
+        .container.learn .title .title-pic img:hover {
+          transform: scale(1.2);
+          rotate: -90deg; }
+    /* line 157, scss/main.scss */
+    .container.learn .title .title-header-text .header-text {
+      font-size: 50px;
+      color: #fff; }
+    /* line 161, scss/main.scss */
+    .container.learn .title .title-header-text .small-text {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #7f46ef; }
+  /* line 169, scss/main.scss */
+  .container.learn .learning-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between; }
+    /* line 175, scss/main.scss */
+    .container.learn .learning-info .card {
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+      width: 300px;
+      height: 400px;
+      background: linear-gradient(122deg, #4100c2 0%, black 100%), #7028ff;
+      transition: .4s; }
+      /* line 185, scss/main.scss */
+      .container.learn .learning-info .card:hover {
+        transform: scale(1.1); }
+      /* line 189, scss/main.scss */
+      .container.learn .learning-info .card .card-title-pic img {
+        width: 200px;
+        margin-bottom: 40px; }
+      /* line 194, scss/main.scss */
+      .container.learn .learning-info .card .card-body {
+        text-align: start;
+        color: #fff; }
+
+@keyframes upDown {
+  0% {
+    margin-top: 0; }
+  50% {
+    margin-top: 20px; }
+  100% {
+    margin-top: 0; } }
